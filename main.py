@@ -101,3 +101,5 @@ sistema.puntos
 # Implementar algo parecido a usar comandos (/help, /new_pred, /new_result, /clasificacion, etc)
 # Función para mostrar simplemente los nombres de todos los pilotos y escuderías de forma ordenada
 # Hacer un readme
+# Trabajar mejor con el archivo de datos.json (¿?)
+# Investigar gitignore
