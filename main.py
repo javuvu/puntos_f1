@@ -133,6 +133,20 @@ carreras = ["Melbourne", "Shangai", "Suzuka", "Sakhir", "Jeddah", "Miami", "Imol
 # carreras = list(range(1, 25))  # Genera una lista de números del 1 al 24
 sistema = SistemaPuntos(pilotos, escuderias, carreras)
 
+# Función simple para mostrar los pilotos
+def list_pilotos():
+    print("\n -- Escuderías y pilotos --")
+    print("Mclaren:\tNorris - Piastri")
+    print("Red Bull:\tVerstappen - Lawson")
+    print("Mercedes:\tRussell - Antonelli")
+    print("Ferrari:\tLeclerc - Hamilton")
+    print("Aston Martin:\tAlonso - Stroll")
+    print("RB:\t\tTsunoda - Hadjar")
+    print("Williams:\tSainz - Albon")
+    print("Alpine:\t\tGasly - Doohan")
+    print("Haas:\t\tBearman - Ocon")
+    print("Sauber:\t\tHulkenberg - Bortoleto\n")
+
 # ----- Ejemplo de uso -----
 
 # sistema.points("Javier")
@@ -145,6 +159,8 @@ sistema.new_result("Melbourne", ["Sainz", "Norris", "Alonso"], ["Aston Martin", 
 sistema.points() # Para mostrar los puntos de los dos
 sistema.points_carrera("Melbourne")
 
+list_pilotos()
+
 
 
 
@@ -153,7 +169,5 @@ sistema.points_carrera("Melbourne")
 # Introducir el top 3 de pilotos y escuderías utilizando "input"
 # Función para mostrar la clasificación de forma bonita
 # Implementar algo parecido a usar comandos (/help, /new_pred, /new_result, /clasificacion, etc)
-# Función para mostrar simplemente los nombres de todos los pilotos y escuderías de forma ordenada
 # Hacer un readme
 # Trabajar mejor con el archivo de datos.json (¿?)
-# Investigar gitignore
