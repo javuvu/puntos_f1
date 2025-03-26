@@ -147,6 +147,25 @@ def list_pilotos():
     print("Haas:\t\tBearman - Ocon")
     print("Sauber:\t\tHulkenberg - Bortoleto\n")
 
+def puntos_escuderias():
+    puntos_asignados = [25, 18, 15, 12, 10, 8, 6, 4, 2, 1]  # Puntos que se obtienen por resultado en carrera
+    escuderias_carrera = input("Introduce las escuderías en orden del 1º al 10º separadas por comas: ").split(",")
+
+    # Eliminar espacios en blanco extra en cada nombre de escudería
+    escuderias_carrera = [e.strip() for e in escuderias_carrera]
+
+    # Diccionario para almacenar los puntos de cada escudería
+    puntos_escuderias = {}
+
+    for i, escuderia in enumerate(escuderias_carrera):
+        if i < len(puntos_asignados):  # Solo consideramos los 10 primeros
+            puntos_escuderias[escuderia] = puntos_escuderias.get(escuderia, 0) + puntos_asignados[i]
+
+    # Mostrar los resultados ordenados por puntos
+    print("\n🏁 Puntos por escudería:")
+    for escuderia, puntos in sorted(puntos_escuderias.items(), key=lambda x: x[1], reverse=True):
+        print(f"{escuderia}: {puntos} puntos")
+
 # ----- Ejemplo de uso -----
 
 # sistema.points("Javier")
@@ -161,13 +180,16 @@ sistema.points_carrera("Melbourne")
 
 list_pilotos()
 
+puntos_escuderias()
+
 
 
 
 # --- To-do List ---
-# Función para calcular el top 3 de escuderías a través de la clasificación final
-# Introducir el top 3 de pilotos y escuderías utilizando "input"
+# Hacer un menú para la terminal:
+    # Introducir el top 3 de pilotos y escuderías utilizando "input"
+    # Implementar algo parecido a usar comandos (/help, /new_pred, /new_result, /clasificacion, etc)
 # Función para mostrar la clasificación de forma bonita
-# Implementar algo parecido a usar comandos (/help, /new_pred, /new_result, /clasificacion, etc)
+# Función para sumar y restar puntos personalizado
 # Hacer un readme
 # Trabajar mejor con el archivo de datos.json (¿?)
